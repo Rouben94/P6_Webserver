@@ -18,3 +18,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Terminal(models.Model):
+    eingabe = models.TextField()
+    ausgabe = models.TextField()
+
+#class Node(models.Model)

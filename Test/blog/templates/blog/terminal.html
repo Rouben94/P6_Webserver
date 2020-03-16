@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h2>Terminal</h2>
+    <pre>{{ output }}</pre>
+    <form method='POST'>{% csrf_token %}
+        {{form1.as_p}}
+        <button type="submit" name="uname">Uname</button>
+    </form>
+    <form method='POST'>{% csrf_token %}
+        {{form2.as_p}}
+        <button type="submit" name="ls">ls</button>
+    </form>
+{% endblock %}
